@@ -1,0 +1,24 @@
+<h2>Register:</h2>
+
+<div id="mensaje">
+        {{#if error}}
+        <div style="font-weight: bold; color:red;">{{error}}</div>
+    {{/if}}
+
+    {{#if message}}
+        <div style="font-weight: bold; color:green;">{{message}}</div>
+    {{/if}}
+
+</div>
+
+<form action="/api/sessions/register" method="post">
+    <input type="text" name="username" placeholder="nombre">
+    <input type="email" name="email" placeholder="email">
+    <input type="password" name="password" placeholder="contraseña">
+    <input type="hidden" name="role" value="user">
+    <br>
+    <input type="submit" value="Registrar">
+
+</form>
+
+{{>menu}}

@@ -1,0 +1,21 @@
+<h2>Login usuarios:</h2>
+<hr>
+<div id="mensaje">
+        {{#if error}}
+        <div style="font-weight: bold; color:red;">{{error}}</div>
+    {{/if}}
+    </div>
+
+
+<form action="/api/sessions/login" method="post">
+
+  <input type="email" name="email" placeholder="Ingrese email" />
+  <input type="password" name="password" placeholder="Ingrese un password" />
+
+  <input type="submit" class="btn-form" value="Ingresar" />
+
+</form>
+
+<a href="/api/sessions/github">Ingreso con github</a>
+
+{{>menu}}

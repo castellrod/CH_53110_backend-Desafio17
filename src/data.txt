@@ -1,0 +1,7 @@
+PORT=8080
+MONGO_URL=mongodb+srv://jpcastell:cursoCoder@backend-db.g9wu9xl.mongodb.net/?retryWrites=true&w=majority&appName=backend-db&dbName=curso-coderhouse
+
+GITHUB_CLIENT_ID=Iv1.f0bda35c81fc9e3bbe0e
+GITHUB_CLIENT_SECRET=b95ab862a07167185bf82f32c4667dd73a5163d3
+
+NODE_ENV = development

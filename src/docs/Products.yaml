@@ -1,0 +1,114 @@
+paths:
+  /api/products/mockproducts:
+    get:
+      summary: Genera productos de prueba (mock)
+      tags:
+        - Products
+      responses:
+        "200":
+          description: Productos de prueba generados correctamente
+        "500":
+          description: Error interno del servidor
+
+  /api/products/loggerTest:
+    get:
+      summary: Prueba de logging
+      tags:
+        - Products
+      responses:
+        "200":
+          description: Prueba de logging exitosa
+        "500":
+          description: Error interno del servidor
+
+  /api/products/:
+    get:
+      summary: Obtener todos los productos
+      tags:
+        - Products
+      responses:
+        "200":
+          description: Lista de productos obtenida correctamente desde la base de datos
+        "500":
+          description: Error interno del servidor
+
+    post:
+      summary: Crear un nuevo producto
+      tags:
+        - Products
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                price:
+                  type: number
+      responses:
+        "201":
+          description: Producto creado exitosamente
+        "500":
+          description: Error interno del servidor
+
+  /api/products/{id}:
+    get:
+      summary: Obtener un producto por ID
+      tags:
+        - Products
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: ID del producto
+      responses:
+        "200":
+          description: Producto encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        "404":
+          description: Producto no encontrado
+        "500":
+          description: Error interno del servidor
+
+    put:
+      summary: Actualizar un producto por ID
+      tags:
+        - Products
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: ID del producto
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                price:
+                  type: number
+      responses:
+        "200":
+          description: Producto actualizado exitosamente
+        "404":
+          description: Producto no encontrado
+        "500":
+          description: Error interno del servidor
+
+    delete:

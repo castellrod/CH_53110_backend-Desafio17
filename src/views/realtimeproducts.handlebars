@@ -1,0 +1,17 @@
+<h1>Lista de productos WEBSOCKET</h1>
+<ul>
+    {{#each products}}
+    <li>{{this.title}} - {{this.description}} - $ {{this.price}} </li>
+    {{/each}}
+
+</ul>
+{{>menu}}
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const socket = io();
+console.log('Conectado al servidor de Socket.io');
+
+socket.on('products', (products) => {
+    console.log('Productos en tiempo real:', products);
+});
+</script>

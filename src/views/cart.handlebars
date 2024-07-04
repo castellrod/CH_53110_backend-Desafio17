@@ -1,0 +1,13 @@
+  <h1>Carrito</h1>
+    {{#if cart}}
+        <ul>
+            {{#each cart.products}}
+                <li>{{title}} - ${{price}}</li>
+            {{/each}}
+        </ul>
+    {{else}}
+        <p>No se encontró el carrito.</p>
+    {{/if}}
+
+    <a href="/">Volver a la home</a>
+    <a href="/products">Volver a products</a>

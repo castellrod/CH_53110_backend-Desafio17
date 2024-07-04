@@ -1,0 +1,31 @@
+{
+    "productos": [
+         {
+              "id": 1,
+              "title": "Hélices DJI",
+              "description": "Hélices para drones de gama alta",
+              "price": "Q250",
+              "thumbnail": "N/A",
+              "code": "HEL-1052",
+              "stock": "12"
+         },
+         {
+              "id": 2,
+              "title": "Control para Dron DJI",
+              "description": "Control para Drones DJI cualquier gama",
+              "price": "Q1300",
+              "thumbnail": "N/A",
+              "code": "CON-0075",
+              "stock": "7"
+         },
+         {
+              "id": 3,
+              "title": "Control Remoto DJI",
+              "description": "Control para Drones DJI cualquier gama",
+              "price": "Q1,285",
+              "thumbnail": "N/A",
+              "code": "CON-0075",
+              "stock": "5"
+         }
+    ]
+}
