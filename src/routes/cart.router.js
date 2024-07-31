@@ -1,5 +1,5 @@
 const Router = require('express').Router;
-const cartRouter=Router()
+const cartRouter=Router();
 const CartController = require('../controller/cart.controller');
 const { isUser } = require('../middlewares/roleAuth');
 

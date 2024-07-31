@@ -24,4 +24,4 @@ sessionRouter.get("/githubCallback", passport.authenticate("githubLogin", {failu
 sessionRouter.get('/logout', SessionController.logout);
 
 
-module.exports = sessionRouter;
+module.exports = sessionRouter

@@ -14,4 +14,4 @@ const validaPassword = (password, passwordConHash) => bcrypt.compareSync(passwor
 module.exports = {
     generaHash,
     validaPassword
-};
+}

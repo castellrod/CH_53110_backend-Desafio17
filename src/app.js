@@ -88,4 +88,4 @@ const connect = async()=>{
     }
 }
 
-connect()
+connect();
